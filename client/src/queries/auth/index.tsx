@@ -21,7 +21,7 @@ export const useSignInMutation = () => {
 };
 
 export const useSignUpMutation = () => {
-  return useMutation<string, string, any>({
+  return useMutation<IApiDataResponse<IAuthResponse>, string, any>({
     mutationKey: [QUERIES_KEY.AUTH.SIGN_UP],
     mutationFn: (value: ISignUp) => signUpService(value)
   });
